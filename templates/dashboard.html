@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-magic me-2"></i>AI Extracted Data</h2>
+    <div class="btn-group">
+        <a href="/export/excel" class="btn btn-success">
+            <i class="fas fa-file-excel me-2"></i>Export Excel
+        </a>
+        <a href="/export/json" class="btn btn-warning text-dark">
+            <i class="fas fa-file-code me-2"></i>Export JSON
+        </a>
+        <a href="/" class="btn btn-outline-primary">Upload More</a>
+    </div>
+</div>
+
+<div class="card p-3 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle table-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Degree</th>
+                    <th>Dept</th>
+                    <th>College</th> <th>District</th>
+                    <th>State</th>
+                    <th>Year</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in candidates %}
+                <tr>
+                    <td class="fw-bold text-primary">{{ c.name }}</td>
+                    <td>{{ c.email }}</td>
+                    <td>{{ c.phone }}</td>
+                    <td><span class="badge bg-info text-dark">{{ c.degree }}</span></td>
+                    <td>{{ c.department }}</td>
+                    
+                    <td class="text-secondary fw-bold">{{ c.college }}</td>
+                    
+                    <td>{{ c.district }}</td>
+                    <td>{{ c.state }}</td>
+                    <td>{{ c.year_passing }}</td>
+                    <td class="text-muted small">{{ c.filename }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="8" class="text-center py-4 text-muted">
+                        No data yet. Upload resumes to see AI in action!
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
