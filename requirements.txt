@@ -2,20 +2,10 @@ Flask==3.0.3
 Werkzeug==3.0.3
 flask_sqlalchemy==3.1.1
 SQLAlchemy==2.0.25
-pdfplumber==0.11.0
-pandas==2.1.4   # working with python 3.10
-gunicorn==22.0.0
-Flask==3.1.2
-Werkzeug==3.1.4
-flask_sqlalchemy==3.1.1
-SQLAlchemy==2.0.44
-
+pandas==2.2.3  ← updated
 pdfplumber==0.11.8
-pandas==2.1.4
 python-docx==1.1.2
 Pillow==12.0.0
 pytesseract==0.3.10
-
 google-generativeai==0.7.2
-
 gunicorn==23.0.0
