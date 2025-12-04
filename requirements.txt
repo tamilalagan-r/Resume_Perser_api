@@ -1,15 +1,12 @@
-Flask==3.0.3
-Werkzeug==3.0.3
-flask_sqlalchemy==3.1.1
-SQLAlchemy==2.0.25
-
-pandas==2.2.3
-pdfplumber==0.11.2
-python-docx==1.1.2
-Pillow==10.4.0
-pytesseract==0.3.10
-
-google-generativeai==0.7.2
-
-gunicorn==23.0.0
+Flask
+Werkzeug
+flask_sqlalchemy
+SQLAlchemy
+pandas
+pdfplumber
+python-docx
+Pillow
+pytesseract
+google-generativeai
+gunicorn
 
